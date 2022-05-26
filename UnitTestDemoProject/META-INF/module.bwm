@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:GetBooksImpl="http://www.example.com/interface/books/GetBooksImpl" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:axis2="http://xsd.tns.tibco.com/bw/models/binding/soap/axis2" xmlns:books="http://www.example.com/xsd/books" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_90KgIEGWEeq3brt6P4aYuQ" targetNamespace="http://tns.tibco.com/bw/composite/UnitTestDemoProject" name="UnitTestDemoProject" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_qC1RUEJfEeqfvfsscALwGg" name="GetBooksByAuthor" promote="ComponentSOAPService/GetBooksByAuthor">
+    <sca:interface.wsdl xmi:id="_qC7_AEJfEeqfvfsscALwGg" interface="http://www.example.com/interface/books/GetBooksImpl#wsdl.interface(GetBooksByAuthor)" scaext:wsdlLocation="../Service%20Descriptors/BooksService.wsdl"/>
+    <scaext:binding xsi:type="axis2:SOAPServiceBinding" xmi:id="_rTExMEJfEeqfvfsscALwGg" name="SOAPServiceBinding" targetNamespace="http://www.tibco.com/65409442492e478cb0b36551df2e2d87/SOAPServiceBinding" portTypeQName="GetBooksImpl:GetBooksByAuthor" transportBindingType="HTTP" attachmentStyle="SwA" modelVersion="1.2.0" portTypeWSDLLocation="platform:/resource/UnitTestDemoProject/Service%20Descriptors/BooksService.wsdl">
+      <bindingType xmi:id="_rTNUEEJfEeqfvfsscALwGg"/>
+      <inboundConfiguration xsi:type="axis2:HttpTransportConfiguration" xmi:id="_vjbzIEJfEeqfvfsscALwGg" endpointURI="/SOAPServiceBinding/getBooksByAuthor/" httpConnector="unittestdemoproject.HTTPConnectorResource"/>
+      <operationConfiguration xmi:id="_rTNUEUJfEeqfvfsscALwGg" operationName="GetBooks" action="GetBooks" actionNeeded="true">
+        <bindingType xmi:id="_rTNUEkJfEeqfvfsscALwGg"/>
+        <messageConfiguration xmi:id="_rTNUE0JfEeqfvfsscALwGg" messageQName="GetBooksImpl:GetBooksByAuthor" wsdlLocation="platform:/resource/UnitTestDemoProject/Service%20Descriptors/BooksService.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_rTNUFEJfEeqfvfsscALwGg" partName="author" partElementName="books:Author"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_rTNUFUJfEeqfvfsscALwGg" messageQName="GetBooksImpl:GetBooksOut" messageDirection="OUTPUT" wsdlLocation="platform:/resource/UnitTestDemoProject/Service%20Descriptors/BooksService.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_rTNUFkJfEeqfvfsscALwGg" partName="message" partElementName="books:BookStore"/>
+        </messageConfiguration>
+        <context xmi:id="_rTN7IEJfEeqfvfsscALwGg">
+          <inputMapping xmi:id="_rTN7IUJfEeqfvfsscALwGg"/>
+          <outputMapping xmi:id="_rTN7IkJfEeqfvfsscALwGg" direction="OUTPUT"/>
+        </context>
+      </operationConfiguration>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_rTN7I0JfEeqfvfsscALwGg" bindingName="SOAPServiceBinding"/>
+  </sca:service>
+  <sca:property xmi:id="_-IApMEGWEeq3brt6P4aYuQ" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_-IGv0EGWEeq3brt6P4aYuQ" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_-IKaMEGWEeq3brt6P4aYuQ" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_-INdgEGWEeq3brt6P4aYuQ" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_-IQg0EGWEeq3brt6P4aYuQ" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_-ITkIEGWEeq3brt6P4aYuQ" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_-IX1kEGWEeq3brt6P4aYuQ" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_-Ibf8EGWEeq3brt6P4aYuQ" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_-IgYcEGWEeq3brt6P4aYuQ" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_WOeYANpZEeyTjtN7qLY4cw" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
+  <sca:component xmi:id="_f2adgEGXEeq3brt6P4aYuQ" name="ComponentMainProcess" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_f2adgUGXEeq3brt6P4aYuQ" processName="unittestdemoproject.MainProcess"/>
+  </sca:component>
+  <sca:component xmi:id="_64pmoEJZEeqteZw2l4jN9w" name="ComponentJMSReceiver" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_64pmoUJZEeqteZw2l4jN9w" processName="unittestdemoproject.JMSReceiver"/>
+  </sca:component>
+  <sca:component xmi:id="_oTVCkEJfEeqfvfsscALwGg" name="ComponentSOAPService" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_oTVCkUJfEeqfvfsscALwGg" processName="unittestdemoproject.SOAPService"/>
+    <sca:service xmi:id="_qCwY0EJfEeqfvfsscALwGg" name="GetBooksByAuthor">
+      <sca:interface.wsdl xmi:id="_qCxm8EJfEeqfvfsscALwGg" interface="http://www.example.com/interface/books/GetBooksImpl#wsdl.interface(GetBooksByAuthor)" scaext:wsdlLocation="../Service%20Descriptors/BooksService.wsdl"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>

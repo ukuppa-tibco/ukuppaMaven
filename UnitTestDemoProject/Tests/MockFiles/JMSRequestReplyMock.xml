@@ -1,0 +1,24 @@
+<JMSRequestReply><ns:ActivityOutput xmlns:ns="http://www.tibco.com/namespaces/tnt/plugins/jms+8834d51a-3f17-4506-a07a-e298acda2a16+output">
+  <JMSHeaders>
+    <ns:JMSDestination>$TMP$.EMS-SERVER.10CC85E2FD82CD.4</ns:JMSDestination>
+    <ns:JMSDeliveryMode>PERSISTENT</ns:JMSDeliveryMode>
+    <ns:JMSMessageID>ID:EMS-SERVER.10CC85E2FD82CE:5</ns:JMSMessageID>
+    <ns:JMSTimestamp>1580276945634</ns:JMSTimestamp>
+    <ns:JMSExpiration>0</ns:JMSExpiration>
+    <ns:JMSRedelivered>false</ns:JMSRedelivered>
+    <ns:JMSPriority>0</ns:JMSPriority>
+    <ns:JMSCorrelationID>ID:EMS-SERVER.10CC85E2FD82CE:4</ns:JMSCorrelationID>
+  </JMSHeaders>
+  <JMSProperties>
+    <JMSXDeliveryCount xmlns="http://www.tibco.com/namespaces/tnt/plugins/jms+8834d51a-3f17-4506-a07a-e298acda2a16+output">1</JMSXDeliveryCount>
+  </JMSProperties>
+  <Body>
+    <ReplyMsg xmlns="http://www.example.org/NewXMLSchema">Message Sent</ReplyMsg>
+    <Boolean_Element xmlns="http://www.example.org/NewXMLSchema">true</Boolean_Element>
+    <Double_Element xmlns="http://www.example.org/NewXMLSchema">1.2E1</Double_Element>
+    <Float_Element xmlns="http://www.example.org/NewXMLSchema">5.4E1</Float_Element>
+    <Int_Element xmlns="http://www.example.org/NewXMLSchema">100</Int_Element>
+  </Body>
+  <DynamicProperties/>
+</ns:ActivityOutput>
+</JMSRequestReply>

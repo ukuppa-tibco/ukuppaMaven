@@ -1,0 +1,2 @@
+Tests for unittestdemoproject.SubProcesswithActivityAssertion
+Tests run : 2    Success : 2 	Failure : 0	Errors : 0

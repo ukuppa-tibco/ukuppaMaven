@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<emulation:EmulationData xmlns:emulation="http:///emulation.ecore" isBW="true" location="/UnitTestDemoProject/Tests/ActivityAssertionWithGoldFile.bwt">
+  <ProcessNode Id="unittestdemoproject.SubProcesswithActivityAssertion" Name="unittestdemoproject.SubProcesswithActivityAssertion" ModelType="BW" moduleName="UnitTestDemoProject">
+    <Assertion Id="b8c48c80-b45b-4596-bc97-823792b779c7" Name="Mapper" hasDecoration="true" assertionType="Activity" goldOutputFromFile="true">
+      <Lang>urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0</Lang>
+      <Expression>&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; version=&quot;20&quot; >&lt;xsl:param name=&quot;Mapper&quot;  /> &lt;xsl:template name=&quot;Mapper&quot; match=&quot;/&quot; >&lt;xsl:variable name=&quot;activityTestInput&quot; as=&quot;item()*&quot;>&lt;Activity-Assertion> &lt;xsl:copy-of select=&quot;$Mapper&quot;  /> &lt;/Activity-Assertion> &lt;/xsl:variable> &lt;xsl:variable name=&quot;AssertType&quot; as=&quot;item()*&quot;>&lt;Activity-Assertion> &lt;xsl:copy-of select=&quot;doc('file:///Tests/GoldFiles/ActivityAssertionGoldFile.xml')&quot;  /> &lt;/Activity-Assertion> &lt;/xsl:variable> &lt;xsl:choose>&lt;xsl:when test=&quot;deep-equal($activityTestInput,$AssertType)&quot;>&lt;result status=&quot;passed&quot; message=&quot;Assertion passed.&quot;/>&lt;/xsl:when>&lt;xsl:otherwise>&lt;result status=&quot;failed&quot; message=&quot;Assertion failed.&quot;/>&lt;/xsl:otherwise>&lt;/xsl:choose> &lt;/xsl:template>&lt;/xsl:stylesheet></Expression>
+      <OriginalExpression>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>
+&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Mapper&quot;/>&lt;xsl:template name=&quot;Mapper&quot; match=&quot;/&quot;>&lt;Activity-Assertion>&lt;activityTestInput>&lt;xsl:value-of select=&quot;$Mapper&quot;/>&lt;/activityTestInput>&lt;AssertType>&lt;testFilePath>&lt;xsl:value-of select=&quot;doc('file:///Tests/GoldFiles/ActivityAssertionGoldFile.xml')&quot;/>&lt;/testFilePath>&lt;/AssertType>&lt;/Activity-Assertion>&lt;/xsl:template>&lt;/xsl:stylesheet></OriginalExpression>
+    </Assertion>
+    <Operation Name="callProcess" serviceName="unittestdemoproject.SubProcesswithActivityAssertion">
+      <Inputs Id="86a0324f-84b5-4082-94e2-9129d986f16dUnitTestDemoProject_unittestdemoproject.SubProcesswithActivityAssertion_callProcess_Start" Name="Start" isDefault="true" type="CALLPROCESS">
+        <informations Name="input" nameSpace="http://www.example.com/namespaces/tns/1580279674527">
+          <nameSpaces prefix="tns" nameSapce="http://www.example.com/namespaces/tns/1580279674527"/>
+          <Parameter Name="tns:Element">
+            <parameters Name="tns:AuthorName" type="string" nameSpace="http://www.example.com/namespaces/tns/1580279674527"/>
+            <parameters Name="tns:elements">
+              <parameters Name="tns:AuthorID" Value="1" type="integer" nameSpace="http://www.example.com/namespaces/tns/1580279674527"/>
+            </parameters>
+          </Parameter>
+        </informations>
+      </Inputs>
+      <resolvedInput inputValue="&lt;tns:Element xmlns:tns='http://www.example.com/namespaces/tns/1580279674527' >&lt;tns:AuthorName>&lt;/tns:AuthorName>&lt;tns:elements>&lt;tns:AuthorID>1&lt;/tns:AuthorID>&lt;/tns:elements>&lt;/tns:Element>"/>
+    </Operation>
+    <MockActivity Id="a4c56a3b-b4d0-4117-8448-28ed098679d3" Name="GetBooks" hasDecoration="true">
+      <MockOutputFilePath>Tests\MockFiles\InvokeSOAPWithHTTPMock.xml</MockOutputFilePath>
+    </MockActivity>
+  </ProcessNode>
+</emulation:EmulationData>

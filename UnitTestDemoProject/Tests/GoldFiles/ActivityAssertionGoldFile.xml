@@ -1,0 +1,1 @@
+<ns:Book xmlns:ns="http://www.example.com/xsd/books" xmlns:tns2="http://www.example.com/namespaces/tns/1580279674527"><ns:Title>My Life and Times</ns:Title><ns:Author>Paul McCartney</ns:Author><ns:Date>1998</ns:Date><ns:ISBN>1-56592-235-2</ns:ISBN><ns:Publisher>McMillin Publishing</ns:Publisher></ns:Book>

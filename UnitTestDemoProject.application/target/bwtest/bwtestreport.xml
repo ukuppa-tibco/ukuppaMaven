@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<completeReportDTO>
+    <moduleResult xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="testSuiteResultDTO">
+        <moduleInfo>
+            <appName>UnitTestDemoProject.application</appName>
+            <appVersion>1.0</appVersion>
+            <moduleName>UnitTestDemoProject</moduleName>
+            <moduleVersion>1.0.0.qualifier</moduleVersion>
+        </moduleInfo>
+        <testSetResult xsi:type="testSetResultDTO">
+            <packageName>unittestdemoproject</packageName>
+            <processName>unittestdemoproject.SubProcesswithActivityAssertion</processName>
+            <testCaseResult xsi:type="testCaseResultDTO">
+                <assertionFailure>0</assertionFailure>
+                <assertionResult xsi:type="assertionResultDTO">
+                    <activityName>Mapper</activityName>
+                    <activityOutput></activityOutput>
+                    <assertionMode>ActivityWithGoldFile</assertionMode>
+                    <assertionStatus>passed</assertionStatus>
+                    <goldInput>&lt;ns:Book xmlns:ns="http://www.example.com/xsd/books" xmlns:tns2="http://www.example.com/namespaces/tns/1580279674527"&gt;&lt;ns:Title&gt;My Life and Times&lt;/ns:Title&gt;&lt;ns:Author&gt;Paul McCartney&lt;/ns:Author&gt;&lt;ns:Date&gt;1998&lt;/ns:Date&gt;&lt;ns:ISBN&gt;1-56592-235-2&lt;/ns:ISBN&gt;&lt;ns:Publisher&gt;McMillin Publishing&lt;/ns:Publisher&gt;&lt;/ns:Book&gt;</goldInput>
+                    <instanceId>bw0a100</instanceId>
+                    <message></message>
+                </assertionResult>
+                <assertions>1</assertions>
+                <assertionsRun>1</assertionsRun>
+                <processFailures>0</processFailures>
+                <testCaseFile>/UnitTestDemoProject/Tests/ActivityAssertionWithGoldFile.bwt</testCaseFile>
+            </testCaseResult>
+            <testCaseResult xsi:type="testCaseResultDTO">
+                <assertionFailure>0</assertionFailure>
+                <assertionResult xsi:type="assertionResultDTO">
+                    <activityName>Mapper</activityName>
+                    <activityOutput></activityOutput>
+                    <assertionMode>Activity</assertionMode>
+                    <assertionStatus>passed</assertionStatus>
+                    <goldInput> &lt;ns:Book &gt;&lt;ns:Title &gt;My Life and Times &lt;/ns:Title&gt;&lt;ns:Author &gt;Paul McCartney &lt;/ns:Author&gt;&lt;ns:Date &gt;1998 &lt;/ns:Date&gt;&lt;ns:ISBN &gt;1-56592-235-2 &lt;/ns:ISBN&gt;&lt;ns:Publisher &gt;McMillin Publishing &lt;/ns:Publisher&gt;&lt;/ns:Book&gt;</goldInput>
+                    <instanceId>bw0a101</instanceId>
+                    <message></message>
+                </assertionResult>
+                <assertions>1</assertions>
+                <assertionsRun>1</assertionsRun>
+                <processFailures>0</processFailures>
+                <testCaseFile>/UnitTestDemoProject/Tests/SubProcessWithActivityAssertionTest.bwt</testCaseFile>
+            </testCaseResult>
+        </testSetResult>
+        <testSetResult xsi:type="testSetResultDTO">
+            <packageName>unittestdemoproject</packageName>
+            <processName>unittestdemoproject.SubProcessWithPrimitiveAssertion</processName>
+            <testCaseResult xsi:type="testCaseResultDTO">
+                <assertionFailure>0</assertionFailure>
+                <assertionResult xsi:type="assertionResultDTO">
+                    <activityName>End</activityName>
+                    <activityOutput></activityOutput>
+                    <assertionMode>Primitive</assertionMode>
+                    <assertionStatus>passed</assertionStatus>
+                    <endElementNameTag>&lt;/message&gt;</endElementNameTag>
+                    <goldInput>&lt;message&gt;Success&lt;/message&gt;</goldInput>
+                    <instanceId>bw0a102</instanceId>
+                    <message></message>
+                    <startElementNameTag>&lt;message&gt;</startElementNameTag>
+                </assertionResult>
+                <assertions>1</assertions>
+                <assertionsRun>1</assertionsRun>
+                <processFailures>0</processFailures>
+                <testCaseFile>/UnitTestDemoProject/Tests/SubProcessWithPrimitiveAssertionTest.bwt</testCaseFile>
+            </testCaseResult>
+        </testSetResult>
+        <showFailureDetails>false</showFailureDetails>
+    </moduleResult>
+</completeReportDTO>
